@@ -118,7 +118,7 @@ export async function getBlogIndexPage(locale: string) {
       ? { cache: "no-store" }
       : {
           next: {
-            revalidate: 300,
+            revalidate: 86400,
             tags: [
               `sanity-blogIndexPage-${locale}`,
               `sanity-blogPost-${locale}`,
@@ -133,7 +133,7 @@ export function getBlogPostSlugs() {
   return sanityClient.fetch(
     blogPostSlugsQuery,
     {},
-    { next: { revalidate: 300, tags: ["sanity-blogPost-slugs"] } },
+    { next: { revalidate: 86400, tags: ["sanity-blogPost-slugs"] } },
   );
 }
 
@@ -146,7 +146,7 @@ export async function getBlogPost(locale: string, slug: string) {
       ? { cache: "no-store" }
       : {
           next: {
-            revalidate: 300,
+            revalidate: 86400,
             tags: [
               `sanity-blogPost-${locale}`,
               `sanity-blogPost-${locale}-${slug}`,
@@ -161,7 +161,7 @@ export function getBlogAuthorSlugs() {
   return sanityClient.fetch(
     blogAuthorSlugsQuery,
     {},
-    { next: { revalidate: 300, tags: ["sanity-author-slugs"] } },
+    { next: { revalidate: 86400, tags: ["sanity-author-slugs"] } },
   );
 }
 
@@ -174,7 +174,7 @@ export async function getBlogAuthor(locale: string, slug: string) {
       ? { cache: "no-store" }
       : {
           next: {
-            revalidate: 300,
+            revalidate: 86400,
             tags: [
               `sanity-author-${locale}`,
               `sanity-author-${locale}-${slug}`,

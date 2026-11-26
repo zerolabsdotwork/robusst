@@ -23,7 +23,7 @@ export async function getCustomizedSolutionsPage(locale: string) {
     { locale },
     {
       next: {
-        revalidate: 300,
+        revalidate: 86400,
         tags: [`sanity-customizedSolutionsPage-${locale}`],
       },
     },

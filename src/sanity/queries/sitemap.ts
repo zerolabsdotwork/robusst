@@ -42,6 +42,6 @@ export function getSitemapContent() {
   return sanityClient.fetch(
     sitemapContentQuery,
     { pageTypes: PAGE_TYPES },
-    { next: { revalidate: 300, tags: ["sanity-sitemap"] } },
+    { next: { revalidate: 86400, tags: ["sanity-sitemap"] } },
   );
 }

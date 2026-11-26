@@ -150,7 +150,7 @@ export async function getCareersPage(locale: string) {
     { locale },
     {
       next: {
-        revalidate: 300,
+        revalidate: 86400,
         tags: [`sanity-careersPage-${locale}`, `sanity-jobPosting-${locale}`],
       },
     },
@@ -161,7 +161,7 @@ export async function getCareerJobIds() {
   return sanityClient.fetch(
     careerJobIdsQuery,
     {},
-    { next: { revalidate: 300 } },
+    { next: { revalidate: 86400 } },
   );
 }
 
@@ -171,7 +171,7 @@ export async function getCareerJob(locale: string, id: string) {
     { locale, id },
     {
       next: {
-        revalidate: 300,
+        revalidate: 86400,
         tags: [`sanity-careersPage-${locale}`, `sanity-jobPosting-${locale}`],
       },
     },

@@ -55,6 +55,6 @@ export async function getContactPage(locale: string) {
   return sanityClient.fetch(
     contactPageQuery,
     { locale },
-    { next: { revalidate: 300, tags: [`sanity-contactPage-${locale}`] } },
+    { next: { revalidate: 86400, tags: [`sanity-contactPage-${locale}`] } },
   );
 }

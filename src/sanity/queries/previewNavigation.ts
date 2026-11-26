@@ -18,7 +18,7 @@ export function getPreviewNavigation(locale: string, types: readonly string[]) {
     { locale, types: [...types] },
     {
       next: {
-        revalidate: 300,
+        revalidate: 86400,
         tags: types.map((type) => `sanity-${type}-${locale}`),
       },
     },

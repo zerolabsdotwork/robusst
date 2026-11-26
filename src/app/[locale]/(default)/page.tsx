@@ -20,9 +20,9 @@ import { getHomePage } from "~/sanity/queries/homePage";
 
 // ── ISR configuration ──────────────────────────────────────────────────────────
 // force-static: throws a build error if anything accidentally forces SSR
-// revalidate:   5-minute safety net if the CMS webhook fails
+// revalidate:   1-day safety net if the CMS webhook fails
 export const dynamic = "force-static";
-export const revalidate = 300;
+export const revalidate = 86400; // 1-day fallback. The Sanity webhook is primary.
 
 export async function generateStaticParams() {
   return locales.map((locale) => ({ locale }));

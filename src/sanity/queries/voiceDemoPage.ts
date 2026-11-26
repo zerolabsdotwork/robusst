@@ -111,6 +111,6 @@ export async function getVoiceDemoPage(locale: string) {
   return sanityClient.fetch(
     voiceDemoPageQuery,
     { locale },
-    { next: { revalidate: 300, tags: [`sanity-voiceDemoPage-${locale}`] } },
+    { next: { revalidate: 86400, tags: [`sanity-voiceDemoPage-${locale}`] } },
   );
 }

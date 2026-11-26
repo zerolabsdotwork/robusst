@@ -2,7 +2,7 @@ import { isHiddenHref } from "~/sanity/pageRelease";
 import { getDiscoveryContent } from "~/sanity/queries/discovery";
 
 const baseUrl = process.env.NEXT_PUBLIC_BASE_URL ?? "https://www.robusst.com";
-export const revalidate = 300;
+export const revalidate = 86400; // 1-day fallback. The Sanity webhook is primary.
 
 function clean(value: string | null | undefined) {
   return value?.replace(/\s+/g, " ").trim() ?? "";

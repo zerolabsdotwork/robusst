@@ -29,7 +29,7 @@ export async function getStoriesPage(locale: string) {
     { locale },
     {
       next: {
-        revalidate: 300,
+        revalidate: 86400,
         tags: [`sanity-storiesPage-${locale}`, `sanity-successStory-${locale}`],
       },
     },
