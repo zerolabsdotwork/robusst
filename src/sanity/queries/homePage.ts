@@ -132,6 +132,6 @@ export async function getHomePage(locale: string) {
   return sanityClient.fetch(
     homePageQuery,
     { locale },
-    { next: { revalidate: 300, tags: [`sanity-homePage-${locale}`] } },
+    { next: { revalidate: 86400, tags: [`sanity-homePage-${locale}`] } },
   );
 }

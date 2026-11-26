@@ -24,7 +24,7 @@ export async function getNetworkMonetizationPage(locale: string) {
     { locale },
     {
       next: {
-        revalidate: 300,
+        revalidate: 86400,
         tags: [`sanity-networkMonetizationPage-${locale}`],
       },
     },

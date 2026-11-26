@@ -25,6 +25,6 @@ export async function getStsDmsPage(locale: string) {
   return sanityClient.fetch(
     stsDmsPageQuery,
     { locale },
-    { next: { revalidate: 300, tags: [`sanity-stsDmsPage-${locale}`] } },
+    { next: { revalidate: 86400, tags: [`sanity-stsDmsPage-${locale}`] } },
   );
 }

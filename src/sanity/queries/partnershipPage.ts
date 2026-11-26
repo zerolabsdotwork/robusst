@@ -63,6 +63,6 @@ export async function getPartnershipPage(locale: string) {
   return sanityClient.fetch(
     partnershipPageQuery,
     { locale },
-    { next: { revalidate: 300, tags: [`sanity-partnershipPage-${locale}`] } },
+    { next: { revalidate: 86400, tags: [`sanity-partnershipPage-${locale}`] } },
   );
 }

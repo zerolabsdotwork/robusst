@@ -51,6 +51,6 @@ export async function getAboutPage(locale: string) {
   return sanityClient.fetch(
     aboutPageQuery,
     { locale },
-    { next: { revalidate: 300, tags: [`sanity-aboutPage-${locale}`] } },
+    { next: { revalidate: 86400, tags: [`sanity-aboutPage-${locale}`] } },
   );
 }

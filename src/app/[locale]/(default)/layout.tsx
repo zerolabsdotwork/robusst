@@ -12,7 +12,10 @@ import {
 
 // ISR: lock to static rendering; safety net for CMS-driven pages
 export const dynamic = "force-static";
-export const revalidate = 300; // 5-minute baseline (webhook is primary)
+// 1-day fallback only. The Sanity webhook (api/revalidate) refreshes pages on
+// publish. A short interval made every page regenerate and write to the ISR
+// cache every few minutes for each locale.
+export const revalidate = 86400;
 
 export default async function DefaultLayout({
   children,

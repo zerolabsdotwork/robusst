@@ -47,6 +47,6 @@ export function getDiscoveryContent(locale = "en") {
   return sanityClient.fetch(
     discoveryContentQuery,
     { locale },
-    { next: { revalidate: 300, tags: [`sanity-discovery-${locale}`] } },
+    { next: { revalidate: 86400, tags: [`sanity-discovery-${locale}`] } },
   );
 }

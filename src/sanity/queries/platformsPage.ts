@@ -49,6 +49,6 @@ export async function getPlatformsPage(locale: string) {
   return sanityClient.fetch(
     platformsPageQuery,
     { locale },
-    { next: { revalidate: 300, tags: [`sanity-platformsPage-${locale}`] } },
+    { next: { revalidate: 86400, tags: [`sanity-platformsPage-${locale}`] } },
   );
 }

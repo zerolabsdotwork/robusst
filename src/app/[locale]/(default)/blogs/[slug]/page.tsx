@@ -9,7 +9,7 @@ import { getBlogPost, getBlogPostSlugs } from "~/sanity/queries/blog";
 
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL ?? "https://www.robusst.com";
 export const dynamic = "force-static";
-export const revalidate = 300;
+export const revalidate = 86400; // 1-day fallback. The Sanity webhook is primary.
 export const dynamicParams = true;
 
 function metrics(text: string) {

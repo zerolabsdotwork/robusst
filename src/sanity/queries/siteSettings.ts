@@ -106,7 +106,7 @@ export async function getSiteSettings(locale: string) {
   return sanityClient.fetch(
     siteSettingsQuery,
     { locale },
-    { next: { revalidate: 300, tags: [`sanity-siteSettings-${locale}`] } },
+    { next: { revalidate: 86400, tags: [`sanity-siteSettings-${locale}`] } },
   );
 }
 
@@ -114,6 +114,6 @@ export async function getLanguageSettings() {
   return sanityClient.fetch(
     languageSettingsQuery,
     {},
-    { next: { revalidate: 300, tags: ["sanity-languageSettings"] } },
+    { next: { revalidate: 86400, tags: ["sanity-languageSettings"] } },
   );
 }

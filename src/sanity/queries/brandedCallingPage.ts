@@ -26,7 +26,7 @@ export async function getBrandedCallingPage(locale: string) {
     brandedCallingPageQuery,
     { locale },
     {
-      next: { revalidate: 300, tags: [`sanity-brandedCallingPage-${locale}`] },
+      next: { revalidate: 86400, tags: [`sanity-brandedCallingPage-${locale}`] },
     },
   );
 }

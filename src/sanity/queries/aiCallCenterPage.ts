@@ -226,7 +226,7 @@ export async function getAiCallCenterPage(locale: string) {
     { locale },
     {
       next: {
-        revalidate: 300,
+        revalidate: 86400,
         tags: [`sanity-aiCallCenterPage-${locale}`],
       },
     },

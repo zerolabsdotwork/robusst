@@ -31,7 +31,7 @@ export async function getIntelligentNocPage(locale: string) {
     intelligentNocPageQuery,
     { locale },
     {
-      next: { revalidate: 300, tags: [`sanity-intelligentNocPage-${locale}`] },
+      next: { revalidate: 86400, tags: [`sanity-intelligentNocPage-${locale}`] },
     },
   );
 }

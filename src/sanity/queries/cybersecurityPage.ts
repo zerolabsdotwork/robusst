@@ -22,6 +22,6 @@ export async function getCybersecurityPage(locale: string) {
   return sanityClient.fetch(
     cybersecurityPageQuery,
     { locale },
-    { next: { revalidate: 300, tags: [`sanity-cybersecurityPage-${locale}`] } },
+    { next: { revalidate: 86400, tags: [`sanity-cybersecurityPage-${locale}`] } },
   );
 }
