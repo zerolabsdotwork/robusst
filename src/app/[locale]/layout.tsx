@@ -4,7 +4,6 @@ import { notFound } from "next/navigation";
 import { draftMode } from "next/headers";
 import { VisualEditing } from "next-sanity/visual-editing";
 import { routing } from "~/i18n/routing";
-import { Analytics } from "@vercel/analytics/next";
 import "~/styles/globals.css";
 import type { Locale } from "~/i18n/config";
 import { geist } from "~/utils/fonts";
@@ -173,7 +172,6 @@ export default async function LocaleLayout({ children, params }: Props) {
         <NextIntlClientProvider messages={messages}>
           {children}
         </NextIntlClientProvider>
-        <Analytics />
         {isDraftMode && <VisualEditing />}
       </body>
     </html>
