@@ -1,7 +1,5 @@
 "use client";
 
-// tRPC
-import { TRPCReactProvider } from "~/trpc/react";
 import { Toaster } from "sonner";
 
 import { useEffect } from "react";
@@ -42,11 +40,9 @@ export const Provider = ({ children }: { children: React.ReactNode }) => {
   }, []);
 
   return (
-    <TRPCReactProvider>
-      <PHProvider client={posthog}>
-        <Toaster richColors />
-        {children}
-      </PHProvider>
-    </TRPCReactProvider>
+    <PHProvider client={posthog}>
+      <Toaster richColors />
+      {children}
+    </PHProvider>
   );
 };
