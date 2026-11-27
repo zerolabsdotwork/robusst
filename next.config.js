@@ -13,7 +13,7 @@ const securityHeaders = [
     key: "Content-Security-Policy",
     value: [
       "default-src 'self'",
-      "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://js.stripe.com https://assets.calendly.com https://platform.linkedin.com https://www.linkedin.com https://snap.licdn.com https://us-assets.i.posthog.com https://va.vercel-scripts.com",
+      "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://js.stripe.com https://assets.calendly.com https://platform.linkedin.com https://www.linkedin.com https://snap.licdn.com https://us-assets.i.posthog.com",
       "style-src 'self' 'unsafe-inline' https://assets.calendly.com https://platform.linkedin.com https://snap.licdn.com",
       "img-src 'self' data: https: blob:",
       "font-src 'self' data:",
